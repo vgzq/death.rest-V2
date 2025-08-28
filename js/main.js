@@ -57,10 +57,11 @@ async function showInstall() {
     await typeColoredLine(p, installLines[idx].prefix, installLines[idx].user);
   }
 
-  window.location.href = "https://death.rest/desktop";
+  window.location.href = "desktop/";
 }
 
 
   typeCommand();
+
 
 
