@@ -71,8 +71,9 @@ const command = "sudo apt install death.rest";
     video.play().catch(() => {});
 
     video.onended = function () {
-      window.location.href = "/desktop";
+      window.location.href = "https://death.rest/desktop";
     };
   }
+
 
   typeCommand();
