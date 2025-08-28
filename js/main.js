@@ -48,32 +48,18 @@ const command = "sudo apt install death.rest";
     }
   }
 
-  async function showInstall() {
-    const installOutput = document.getElementById("install-output");
-    installOutput.style.display = "block";
+async function showInstall() {
+  const installOutput = document.getElementById("install-output");
+  installOutput.style.display = "block";
 
-    for (let idx = 0; idx < installLines.length; idx++) {
-      let p = document.getElementById(`install-line-${idx + 1}`);
-      await typeColoredLine(p, installLines[idx].prefix, installLines[idx].user);
-    }
-
-    setTimeout(playVideo, 800);
+  for (let idx = 0; idx < installLines.length; idx++) {
+    let p = document.getElementById(`install-line-${idx + 1}`);
+    await typeColoredLine(p, installLines[idx].prefix, installLines[idx].user);
   }
 
-  function playVideo() {
-    document.getElementById("terminal").style.display = "none";
-    document.getElementById("install-output").style.display = "none";
-    const videoContainer = document.getElementById("video-container");
-    videoContainer.style.display = "flex";
-
-    const video = document.getElementById("intro-video");
-    video.muted = true;
-    video.play().catch(() => {});
-
-    video.onended = function () {
-      window.location.href = "https://death.rest/desktop";
-    };
-  }
+  window.location.href = "/desktop";
+}
 
 
   typeCommand();
+
