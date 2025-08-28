@@ -1,0 +1,69 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="css/desktop.css">
+  <title>death.rest</title>
+</head>
+<body class="crt">
+  <div class="user-panel">
+    <div class="user" onclick="togglePopup(event, this, 'Fury', '/static/img/Yuta.png')">
+      <img src="images/Yuta.png" alt="Yuta" class="user-avatar">
+      <span class="username">Yuta</span>
+    </div>
+    <div class="user" onclick="togglePopup(event, this, 'GalaxyArts', '/static/img/Bleed.png')">
+      <img src="images/Bleed.png" alt="Bleed" class="user-avatar">
+      <span class="username">Bleed</span>
+    </div>
+    <div class="user" onclick="togglePopup(event, this, 'Anti', '/static/img/Duko.png')">
+      <img src="images/Duko.png" alt="Duko" class="user-avatar">
+      <span class="username">Duko</span>
+    </div>
+    <div class="user" onclick="togglePopup(event, this, 'Screwed', '/static/img/Serpentine.png')">
+      <img src="images/Serpentine.png" alt="Serpentine" class="user-avatar">
+      <span class="username">Serpentine</span>
+    </div>
+    <div class="user" onclick="togglePopup(event, this, 'Anon', '/static/img/Samer.png')">
+      <img src="images/Samer.png" alt="Samer" class="user-avatar">
+      <span class="username">Samer</span>
+    </div>
+  </div>
+  <div class="spider">
+    <div class="spider-title">DEATH.REST</div>
+    <div class="spider-moto">"die at 3am ☁"</div>
+    <img src="images/spider.png" alt="Spider">
+  </div>
+  <div class="taskbar">
+    <div class="taskbar-icon" onclick="showTerminal()" role="button" aria-label="Open terminal">
+      <svg role="img" aria-label="Terminal icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 17L10 11L4 5M12 19H20" stroke="#e0e0e0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    </div>
+    <div class="taskbar-separator"></div>
+    <div class="taskbar-time" id="time-display"></div>
+  </div>
+  <div class="terminal-popup terminal-crt" id="terminal" aria-hidden="true" role="dialog" aria-label="Terminal window">
+    <div class="terminal-header">
+      <div class="terminal-title">terminal@death.rest</div>
+      <button class="terminal-close" onclick="hideTerminal()" aria-label="Close terminal">✕</button>
+    </div>
+    <div class="terminal-body">
+      <div class="terminal-ascii" id="terminal-ascii"></div>
+      <div class="terminal-info" id="terminal-info"></div>
+    </div>
+    <div class="terminal-scanlines"></div>
+  </div>
+  <div class="popup popup-crt" id="user-popup" aria-hidden="true" role="dialog" aria-label="User info popup">
+    <div class="popup-header">
+      <div class="popup-title" id="popup-username"></div>
+      <button class="popup-close" onclick="hidePopup()" aria-label="Close popup">✕</button>
+    </div>
+    <div class="popup-content" id="popup-content"></div>
+    <div class="popup-scanlines"></div>
+  </div>
+  <audio id="startup-sound" preload="auto">
+    <source src="media/audio.mp3" type="audio/mpeg">
+  </audio>
+  <script data-cfasync="false" src="js/email-decode.min.js"></script><script src="js/audio.js"></script>
+  <script src="js/desktop.js"></script>
+
+</body></html>
